@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_login</title>
+    <link rel="stylesheet" href="./../css/signup.css">
+</head>
+
+<body>
+    <div id="container">
+        <form class="form-login">
+            <h1>Đăng Ký</h1>
+            <div class="form-text">
+                <label for="">Username</label>
+                <input type="text" name="ten_tk">
+            </div>
+            <div class="form-text">
+                <label for="">Passwork</label>
+                <input type="password" name="mat_khau">
+            </div>
+            <div class="form-text">
+                <label for="">Email</label>
+                <input type="email" name="email">
+            </div>
+            <button><a href="signup.html">Đăng Ký </a></button>
+            <button><a href="signin.html">Đăng Nhập </a></button>
+        </form>
+    </div>
+    <script>
+        const formLogin = document.querySelectorAll('.form-text input')
+        const formLabel = document.querySelectorAll('.form-text label')
+        for (let i = 0; i < 3; i++) {
+            formLogin[i].addEventListener("mouseover", function () {
+                formLabel[i].classList.add("focus")
+            })
+            formLogin[i].addEventListener("mouseout", function () {
+                if (formLogin[i].value == "") {
+                    formLabel[i].classList.remove("focus")
+                }
+
+            })
+        }
+    </script>
+</body>
+
+</html>
